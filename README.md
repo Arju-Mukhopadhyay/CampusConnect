@@ -98,7 +98,7 @@ MIT License
 
 ## 👩‍💻 Authors
 
-Built with ❤️ by:
+Built by:
 
 * Arju Mukhopadhyay
 * Subhangi Banerjee
