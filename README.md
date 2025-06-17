@@ -9,18 +9,14 @@ NODE_ENV=...
 
 ### Build the app
 
-```shell
-npm run build
-```
-
-### Start the app
-
-```shell
-npm start
-```
 # For backend
+```
 npm run build
 npm start
+```
 # For frontend
+```
 cd frontend
 npm run dev
+```
+
