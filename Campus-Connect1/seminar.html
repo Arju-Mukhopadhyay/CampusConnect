@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seminars - Campus Connect</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/f20de4b2ea.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-color: var(--bg);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--card);
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a, .nav-links button {
+      text-decoration: none;
+      color: var(--text);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    /* Hero Section */
+    .hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 80px 10%;
+      background: linear-gradient(120deg, var(--card), var(--bg));
+    }
+
+    .hero-grid img {
+      width: 100%;
+      max-width: 450px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px var(--shadow);
+      transform: rotate(-1deg);
+    }
+
+    .hero-content {
+      flex: 1 1 450px;
+      min-width: 300px;
+    }
+
+    .hero-content h1 {
+      color: var(--link);
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    /* Cards */
+    .seminar-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      padding: 60px 10%;
+    }
+
+    .seminar-card {
+      background: var(--card);
+      border-left: 6px solid var(--link);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+    }
+
+    .seminar-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .seminar-card i {
+      font-size: 2.8rem;
+      color: var(--link);
+      margin-bottom: 15px;
+    }
+
+    .seminar-card h3 {
+      font-size: 1.4rem;
+      margin: 10px 0;
+      color: var(--link);
+    }
+
+    .seminar-card p {
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .seminar-card button {
+      background: var(--link);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 0.95rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .testimonial-box {
+      background: var(--card);
+      margin: 60px auto;
+      padding: 30px;
+      border-left: 6px solid var(--link);
+      border-radius: 12px;
+      max-width: 700px;
+      color: var(--text);
+      font-style: italic;
+      box-shadow: 0 4px 10px var(--shadow);
+    }
+
+    .back-btn {
+      display: inline-block;
+      font-size: 1rem;
+      margin: 40px auto;
+      text-align: center;
+      color: var(--link);
+      text-decoration: none;
+      border: 2px solid var(--link);
+      padding: 10px 20px;
+      border-radius: 10px;
+      background-color: transparent;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: var(--link);
+      color: white;
+    }
+
+    footer {
+      padding: 50px 10%;
+      background: var(--card);
+      color: var(--text);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    footer h3 {
+      color: var(--link);
+      margin-bottom: 15px;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .social-icons a {
+      font-size: 1.5rem;
+      margin-right: 15px;
+      color: var(--link);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.85rem;
+      padding: 20px;
+      background: var(--bg);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Campus Connect</div>
+    <ul class="nav-links">
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><button id="theme-toggle">🌙</button></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-grid">
+    <div class="hero-content">
+      <h1>🚀 Elevate Your Engineering Journey</h1>
+      <p>⚙️ Fuel your curiosity, sharpen your edge, and network with pioneers. Our expert-led sessions take you beyond textbooks into the future of engineering innovation.</p>
+    </div>
+    <img src="S1.jpg" alt="Engineering Seminar Banner">
+  </section>
+
+  <!-- Cards -->
+  <section class="seminar-cards-grid">
+    <div class="seminar-card">
+      <i class="fas fa-robot"></i>
+      <h3>AI & Robotics in Learning Engineering</h3>
+      <p>Discover how AI is transforming automation, robotics, and smart manufacturing. Learn from experts working on real-world solutions.</p>
+      <p><strong>📅 July 12</strong> | <strong>📍 Innovation Hall</strong></p>
+      <button onclick="location.href='auth.html'">Reserve Seat</button>
+    </div>
+
+    <div class="seminar-card">
+      <i class="fas fa-network-wired"></i>
+      <h3>Future of 5G & IoT for Engineers</h3>
+      <p>Gain insight into 5G and IoT integration. Ideal for ECE, CSE, and IT students preparing for the future.</p>
+      <p><strong>📅 Aug 3</strong> | <strong>🌐 Online</strong></p>
+      <button onclick="location.href='auth.html'">Reserve Seat</button>
+    </div>
+
+    <div class="seminar-card">
+      <i class="fas fa-bolt"></i>
+      <h3>Green Energy & Sustainable Tech</h3>
+      <p>Explore developments in renewable energy and how engineering drives sustainable innovation.</p>
+      <p><strong>📅 Sep 9</strong> | <strong>🏫 Seminar Room B</strong></p>
+      <button onclick="location.href='auth.html'">Reserve Seat</button>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <div class="testimonial-box">
+    “The tech sessions weren’t just lectures — they were experiences. Robotics demo was chef’s kiss! ✨”
+    <br><strong>– Aarav Singh, 4th Year Mechanical</strong>
+  </div>
+
+  <!-- Back to Home -->
+  <div style="text-align: center;">
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <h3>Campus Connect</h3>
+      <p>Bridging classrooms with real-world innovation.</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="auth.html">Register</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+    &copy; 2025 Campus Connect
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile - Campus Connect</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="logo">Campus Connect</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="auth.html">Auth</a></li>
+      <li><button id="theme-toggle">🌙</button></li>
+    </ul>
+  </nav>
+
+  <section class="section auth-form" style="margin-top: 100px;">
+    <h2>Your Profile</h2>
+    <div class="profile-box" id="profile-box"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Campus Connect</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const profileBox = document.getElementById("profile-box");
+    const user = JSON.parse(localStorage.getItem("campusConnectUser"));
+
+    if (user) {
+      profileBox.innerHTML = `
+        <p><strong>Name:</strong> ${user.name}</p>
+        <p><strong>Email:</strong> ${user.email}</p>
+        <p><strong>Year of Study:</strong> ${user.year}</p>
+        <button id="logout-btn">Logout</button>
+      `;
+
+      document.getElementById("logout-btn").addEventListener("click", () => {
+        localStorage.removeItem("campusConnectUser");
+        window.location.href = "auth.html";
+      });
+    } else {
+      profileBox.innerHTML = `
+        <p style="margin-bottom: 16px;">No user data found.</p>
+        <a href="create.html"><button>Create Your Account</button></a>
+      `;
+    }
+  </script>
+</body>
+</html>

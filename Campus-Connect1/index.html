@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://kit.fontawesome.com/f20de4b2ea.js" crossorigin="anonymous"></script>
+  <title>Campus Connect</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="logo">Campus Connect</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="D:\Project1 4th Yr\Campus_Connect\Frontend\index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Events ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="workshop.html">Workshop</a></li>
+          <li><a href="seminar.html">Seminar</a></li>
+          <li><a href="hackathon.html">Hackathon</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><button id="theme-toggle">🌙</button></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h1>CONNECT TODAY. LEAD TOMORROW.</h1>
+      <p>From campus tips to career tricks — connect with your seniors!</p>
+      <button onclick="document.getElementById('how-it-works').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+    </div>
+  </header>
+
+  <section id="how-it-works" class="container">
+    <h2>How It Works</h2>
+    <div class="blocks">
+      <div class="block">
+        <a href="about.html" style="text-decoration: none; color: inherit;">
+        <i class="fas fa-laptop-code block-icon"></i>
+        <h3>Step 1: Meet The Platform</h3>
+        <p>Create your account quickly and securely to get started.</p>
+        </a>
+      </div>
+      <div class="block">
+        <a href="setup.html" style="text-decoration: none; color: inherit;">
+        <i class="fas fa-user-plus"></i>
+        <h3>Step 2: Setup Your Profile</h3>
+        <p>Set your preferences and goals to tailor the experience.</p>
+        </a>
+      </div>
+      <div class="block">
+        <a href="browse.html" style="text-decoration: none; color: inherit;">
+        <i class="fas fa-users"></i>
+        <h3>Step 3: Browse Alumni</h3>
+        <p>Interact with the platform and access useful resources.</p>
+        </a>
+      </div>
+      <div class="block">
+        <a href="http://localhost:3000/" style="text-decoration: none; color: inherit;">
+        <i class="fas fa-comments"></i>
+        <h3>Step 4: Connect & Chat</h3>
+        <p>Track your progress and grow with senior mentorship.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="success-stories">
+    <h2>Success Stories</h2>
+    <div class="carousel">
+      <button class="nav left" onclick="prevSlide()">&#10094;</button>
+      <div class="carousel-container">
+        <div class="slide active">
+          <img src="N2.jpeg" alt="Story 1">
+          <div class="text">
+            <h3>Nishant Chahar</h3>
+            <p>“Joining the platform changed my career. The mentorship helped me land my dream role!”</p>
+            <p><strong>— Software Engineer at Microsoft</strong></p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="N1.jpeg" alt="Story 2">
+          <div class="text">
+            <h3>Anshikha Sinha</h3>
+            <p>"I found amazing guidance and real growth opportunities."</p>
+            <p><strong>— Data Analyst at EY</strong></p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="N3.jpeg" alt="Story 3">
+          <div class="text">
+            <h3>Rahul Verma</h3>
+            <p>"The mentorship program helped me unlock new perspectives."</p>
+            <p><strong>— Audit & Assurance at Deloitte</strong></p>
+          </div>
+        </div>
+      </div>
+      <button class="nav right" onclick="nextSlide()">&#10095;</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Campus Connect</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

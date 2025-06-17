@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Browse Alumni - Campus Connect</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/f20de4b2ea.js" crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="logo">Campus Connect</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><button id="theme-toggle">🌙</button></li>
+    </ul>
+  </nav>
+
+  <!-- Browse Alumni Page -->
+  <section class="section">
+    <h2>Browse Alumni</h2>
+    <p class="section-subtext">Interact with the platform and access useful resources from experienced seniors.</p>
+
+    <div class="alumni-stats">
+      <div class="stat-card">
+        <i class="fas fa-user-graduate"></i>
+        <h3>54</h3>
+        <p>Alumni Registered</p>
+        <span class="stat-trend">+8%</span>
+      </div>
+      <div class="stat-card">
+        <i class="fas fa-comments"></i>
+        <h3>37</h3>
+        <p>Active Conversations</p>
+        <span class="status active">Active</span>
+      </div>
+      <div class="stat-card">
+  <i class="fas fa-cogs"></i>
+  <h3>Customize</h3>
+  <p>Filter by Domain</p>
+  <button class="filter-btn" id="openPreferences">Edit Preferences</button>
+</div>
+
+    </div>
+
+    <div class="alumni-cards">
+      <div class="alumni-card">
+        <img src="N2.jpeg" alt="Alumni Photo">
+        <h4>Nishant Chahar</h4>
+        <p>Software Engineer at Microsoft</p>
+      </div>
+      <div class="alumni-card">
+        <img src="N1.jpeg" alt="Alumni Photo">
+        <h4>Anshikha Sinha</h4>
+        <p>Data Analyst at EY</p>
+      </div>
+      <div class="alumni-card">
+        <img src="N3.jpeg" alt="Alumni Photo">
+        <h4>Rahul Verma</h4>
+        <p>Audit & Assurance at Deloitte</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Campus Connect</p>
+  </footer>
+  <!-- Preferences Modal -->
+<div id="preferences-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" id="close-modal">&times;</span>
+    <h3>Edit Preferences</h3>
+    <form id="preferences-form">
+      <label for="domain">Preferred Domain:</label>
+      <select id="domain" required>
+        <option value="">Select</option>
+        <option value="Software">Software</option>
+        <option value="Data Science">Data Science</option>
+        <option value="Design">Design</option>
+        <option value="Product">Product</option>
+        <option value="Product">Others</option>
+      </select>
+
+      <label for="batch">Graduation Year:</label>
+      <select id="batch" required>
+      option value="">Select Graduation Year</option>
+      </select>
+      <button type="submit">Save Preferences</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>

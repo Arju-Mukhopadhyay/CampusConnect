@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Campus Connect</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/f20de4b2ea.js" crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="logo">Campus Connect</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><button id="theme-toggle">🌙</button></li>
+    </ul>
+  </nav>
+
+  <section class="section">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <!-- Contact Form -->
+      <div class="contact-card">
+        <form id="contact-form">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" required />
+
+          <label for="email">Your Email</label>
+          <input type="email" id="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="4" required></textarea>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="not-robot" required />
+            <label for="not-robot">I am not a robot</label>
+          </div>
+
+          <button type="submit" class="send-btn">Send</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope"></i> campusconnect@gmail.com</p>
+        <p><i class="fas fa-id-badge"></i> ID: CC-2025-ALUMNI</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Campus Connect</p>
+  </footer>
+
+  <!-- JS Logic -->
+  <script>
+    const form = document.getElementById("contact-form");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const verified = document.getElementById("not-robot").checked;
+
+      if (!verified) {
+        alert("Please verify you're not a robot.");
+        return;
+      }
+
+      // Simulate sending email
+      alert(`Message sent to campusconnect@gmail.com\n\nFrom: ${name} (${email})\n\n${message}`);
+      form.reset();
+    });
+  </script>
+</body>
+</html>

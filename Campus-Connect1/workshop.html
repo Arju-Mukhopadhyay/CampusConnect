@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Workshops - Campus Connect</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/f20de4b2ea.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-color: var(--bg);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .navbar {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Theme-Compatible Highlight Text */
+    .subtext-highlight {
+      color: var(--text);
+      font-weight: 500;
+      opacity: 0.9;
+      transition: color 0.3s ease;
+    }
+    [data-theme="dark"] .subtext-highlight {
+      color: var(--link);
+      opacity: 1;
+    }
+
+    /* Header Section */
+    .workshop-banner {
+      text-align: center;
+      padding: 80px 20px 40px;
+      background: linear-gradient(135deg, #d6faff, #ecfeff);
+      border-bottom: 2px solid var(--link);
+    }
+
+    .workshop-banner h1 {
+      font-size: 2.8rem;
+      color: var(--link);
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--link);
+      margin-top: 50px;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 80px;
+      height: 4px;
+      background: var(--link);
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    /* Cards */
+    .workshop-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .workshop-card {
+      background: var(--card);
+      border-radius: 16px;
+      box-shadow: 0 4px 12px var(--shadow);
+      width: 320px;
+      padding: 24px 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .workshop-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 20px var(--shadow);
+    }
+
+    .workshop-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .workshop-card h3 {
+      color: var(--link);
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .workshop-card p {
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .badge {
+      background: linear-gradient(to right, #1976d2, #64b5f6);
+      color: white;
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .workshop-card button {
+      background: var(--link);
+      color: white;
+      border: none;
+      padding: 10px 22px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .workshop-card button:hover {
+      background: var(--hover);
+    }
+
+    .student-strip {
+      background: var(--card);
+      padding: 30px 20px;
+      margin: 50px auto 0;
+      border-left: 6px solid var(--link);
+      border-radius: 8px;
+      box-shadow: 0 2px 6px var(--shadow);
+      font-size: 1.05rem;
+      color: var(--text);
+      max-width: 800px;
+      line-height: 1.6;
+    }
+
+    .student-strip i {
+      color: var(--link);
+      margin-right: 8px;
+    }
+
+   .back-btn {
+  display: inline-block;
+  font-size: 1rem;
+  margin: 40px auto;
+  text-align: center;
+  color: var(--link);
+  text-decoration: none;
+  border: 2px solid var(--link);
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: transparent;
+
+  /* ✅ FIX: Smooth hover transitions */
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  /* ✅ FIX: Prevent flicker in some browsers */
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+
+    .back-btn:hover {
+      background-color: var(--link);
+      color: white;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      text-align: center;
+      background: var(--card);
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="logo">Campus Connect</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><button id="theme-toggle">🌙</button></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <section class="workshop-banner">
+    <h1>🔥 Skill Up with Campus Workshops</h1>
+    <p class="subtext-highlight">
+      Get hands-on with design, AI, and branding — our fast, fun, and future-focused workshops are designed to boost your career and confidence 🚀
+    </p>
+  </section>
+
+  <h2 class="section-title">Upcoming Workshops</h2>
+
+  <!-- Cards -->
+  <section class="workshop-cards">
+    <div class="workshop-card">
+      <img src="W11.jpg" alt="UI/UX Workshop">
+      <div class="badge">🎨 Beginner Friendly</div>
+      <h3>UI/UX Bootcamp</h3>
+      <p>Learn to design clean, user-friendly apps using Figma and Adobe XD.</p>
+      <p><strong>📅 July 20, 2025</strong><br><strong>🌐 Online</strong></p>
+      <button onclick="location.href='auth.html'">Register</button>
+    </div>
+
+    <div class="workshop-card">
+      <img src="W12.jpg" alt="AI Workshop">
+      <div class="badge">🤖 No Code Needed</div>
+      <h3>AI for Everyone</h3>
+      <p>Explore AI/ML tools with live demos — no coding background required.</p>
+      <p><strong>📅 Aug 5, 2025</strong><br><strong>🏫 Campus Lab 3</strong></p>
+      <button onclick="location.href='auth.html'">Register</button>
+    </div>
+
+    <div class="workshop-card">
+      <img src="W13.jpg" alt="Canva Workshop">
+      <div class="badge">🌟 Creative Boost</div>
+      <h3>Personal Branding with Canva</h3>
+      <p>Create Insta-ready resumes, banners, and digital content to stand out.</p>
+      <p><strong>📅 Sep 15, 2025</strong><br><strong>🌐 Online</strong></p>
+      <button onclick="location.href='auth.html'">Register</button>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <div class="student-strip">
+    <i class="fas fa-quote-left"></i>
+    “The Canva workshop helped me land freelance gigs and boost my college club's Insta profile!”
+    <br><strong>– Priya Sen, 3rd Year B.Tech</strong>
+  </div>
+
+  <!-- Back to Home -->
+  <div style="text-align: center;">
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Campus Connect | Learn. Build. Lead.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
