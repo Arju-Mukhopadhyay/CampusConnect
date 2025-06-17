@@ -52,25 +52,28 @@ CampusConnect is a dynamic, full-stack student engagement platform that connects
 bash
 # Clone the repository
 git clone https://github.com/Arju-Mukhopadhyay/CampusConnect
-cd campus-connect
 
-# Install client dependencies
-cd client && npm install
+### Setup .env file
 
-# Install server dependencies
-cd ../server && npm install
+```js
+PORT=...
+MONGO_DB_URI=...
+JWT_SECRET=...
+NODE_ENV=...
+```
 
+### Build the app
 
-### Running the App
-
-bash
-# Run backend
-cd server
+# For backend
+```
+npm run build
+npm start
+```
+# For frontend
+```
+cd frontend
 npm run dev
-
-# Run frontend
-cd ../client
-npm run dev
+```
 
 
 ---
@@ -102,27 +105,3 @@ Built with ❤️ by:
 * Progya Biswas
 
 If you liked this project, please ⭐ star the repo and share!
-
-
-### Setup .env file
-
-```js
-PORT=...
-MONGO_DB_URI=...
-JWT_SECRET=...
-NODE_ENV=...
-```
-
-### Build the app
-
-# For backend
-```
-npm run build
-npm start
-```
-# For frontend
-```
-cd frontend
-npm run dev
-```
-
