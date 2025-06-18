@@ -84,7 +84,15 @@ npm run dev
 
 
 ### 💬 CampusTalk Chat Interface  
+![Image](https://github.com/user-attachments/assets/bcd1c8a2-4e40-4452-9e64-01516984dff8)
 
+![Image](https://github.com/user-attachments/assets/ab280f98-4c03-4620-9763-f9bb33e0b4d2)
+
+![Image](https://github.com/user-attachments/assets/4fdac812-94cf-47d8-8a75-88b2e681f9a9)
+
+![Image](https://github.com/user-attachments/assets/670df422-3b48-4d7c-9e36-e17370d0492a)
+
+![Image](https://github.com/user-attachments/assets/c83ef720-b18b-4c59-9a60-2b2a23e2ccec)
 ---
 
 ## 🙌 Contributing
