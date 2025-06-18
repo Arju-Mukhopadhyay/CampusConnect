@@ -80,7 +80,10 @@ npm run dev
 
 ## 📸 Screenshots
 
-Add screenshots here showing key pages and chat interface.
+### 🏠 Homepage  
+
+
+### 💬 CampusTalk Chat Interface  
 
 ---
 
