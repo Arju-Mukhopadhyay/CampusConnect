@@ -81,13 +81,14 @@ npm run dev
 ## 📸 Screenshots
 
 ### 🏠 Homepage  
+![Image](https://github.com/user-attachments/assets/e843d416-7e25-4094-9419-eb5a1b405e4d)
+
 ![Image](https://github.com/user-attachments/assets/55d73ff8-1fba-402b-9671-cf8df262bb2f)
 
 ![Image](https://github.com/user-attachments/assets/c2380de9-cfcb-4ab9-99fb-0c3a8ec7acc2)
 
 ![Image](https://github.com/user-attachments/assets/0880b11f-9156-41b7-9572-00e596a38af2)
 
-![Image](https://github.com/user-attachments/assets/ee2bd201-cff3-4655-9771-b5e5fbd4feee)
 
 ### 💬 CampusTalk Chat Interface  
 ![Image](https://github.com/user-attachments/assets/bcd1c8a2-4e40-4452-9e64-01516984dff8)
